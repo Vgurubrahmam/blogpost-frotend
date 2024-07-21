@@ -118,7 +118,7 @@ function Login() {
       <div className="login-con  d-flex flex-column justify-content-center ">
         <h1 className="font-Lato text-white">Sign In</h1>
         <section>
-          <form onSubmit={handleSubmit} className=''>
+          <form onSubmit={handleSubmit} className='w-100'>
             <label className="labelstyle text-white" htmlFor="email">Enter Email</label>
             <input
               type="email"

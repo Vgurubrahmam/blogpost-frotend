@@ -97,7 +97,7 @@ function Home() {
                     <input className='text-left searchpost text-secondary ml-4 mt-3' type='search' placeholder='Search Post Category..' />
                 </div>
                 {/* cards */}
-                <div className="col-md-9">
+                <div className="col-md-12">
                     <div className="row">
                         {blogs.map((blog, index) => (
                             <div className="col-lg-4 col-md-6 mb-4" key={index}>

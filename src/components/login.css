@@ -5,20 +5,8 @@
     height:100vh;
     background-size: cover;
 }
-.login-con{
-    border-radius: 8px;
-    box-shadow:5px 0px 10px 10px;
-    width: 35%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    color: black;
-    padding: 30px;
-    
-    
-    
-}
+
+
 .signup-con{
     border-radius: 8px;
     
@@ -80,4 +68,36 @@ a{
     height: 74px;
     width:200%;
     
+}
+@media (min-width:767px){
+    .login-con{
+        border-radius: 8px;
+        box-shadow:5px 0px 10px 10px;
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        color: black;
+        padding: 30px;
+        
+        
+        
+    }
+}
+@media (max-width:768px){
+    .login-con{
+        border-radius: 8px;
+        box-shadow:5px 0px 10px 10px;
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 200px;
+        color: black;
+        padding: 30px;
+        
+        
+        
+    }
 }
