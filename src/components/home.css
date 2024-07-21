@@ -13,7 +13,7 @@
     /* text-align: left; */
 }
 }
-@media (min-width:767px){
+@media (min-width:769px){
    .bg-container{
     width: 130vw;
     margin-top: 100px;
