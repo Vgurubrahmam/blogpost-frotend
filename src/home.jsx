@@ -75,7 +75,7 @@ function Home() {
             </nav>
 
             <div className='bg-container bg-secondary text-white'>
-                <div className='d-flex flex-row justify-content-between'>
+                <div className='d-flex flex-row justify-content-around'>
                     
                     
                     <div className='d-flex flex-column justify-content-center text-center'>
@@ -94,7 +94,7 @@ function Home() {
                 </div>
                 {/* //searchinput */}
                 <div className='text-start m-5'>
-                    <input className='text-left searchpost text-secondary ml-4 mt-3' type='search' placeholder='Search Post Category..' />
+                    <input className='text-left searchpost text-secondary ' type='search' placeholder='Search Post Category..' />
                 </div>
                 {/* cards */}
                 <div className="col-md-12">
