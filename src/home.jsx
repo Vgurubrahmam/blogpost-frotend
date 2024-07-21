@@ -95,7 +95,7 @@ function Home() {
                     
                 </div>
                 
-                <div className='text-start m-5'>
+                <div className='text-start mt-5 ml-2 mr-5 mb-5 '>
                     <input className='text-left searchpost text-secondary' type='search' placeholder='Search Post Category..' />
                 </div>
                 
@@ -110,7 +110,7 @@ function Home() {
                                         alt={blog.title}
                                     />
                                     <div className="card-body d-flex flex-column">
-                                        <h5 className="card-title">{blog.title}</h5>
+                                        <h5 className="card-title text-start fw-bold">{blog.title}</h5>
                                         <p className="card-text limited-height">{blog.description}</p>
                                        <div className='mt-3'>
                                         <Link to="#" className="btn btn-secondary">
