@@ -99,11 +99,11 @@ function Home() {
                     <input className='text-left searchpost text-secondary' type='search' placeholder='Search Post Category..' />
                 </div>
                 
-                <div className="col-md-12">
-                    <div className="row">
+                <div className="main-card-con">
+                    <div className="">
                         {blogs.map((blog, index) => (
                             <div className="col-lg-4 col-md-6 mb-4" key={index}>
-                                <div className="card h-100 ml-5">
+                                <div className="card h-100">
                                     <img
                                         src={blog.imageurl}
                                         className="card-img-top"
@@ -112,7 +112,7 @@ function Home() {
                                     <div className="card-body d-flex flex-column">
                                         <h5 className="card-title">{blog.title}</h5>
                                         <p className="card-text limited-height">{blog.description}</p>
-                                       <div className='mt-auto'>
+                                       <div className='mt-3'>
                                         <Link to="#" className="btn btn-secondary">
                                         {blog.category}
                                         </Link>

@@ -61,6 +61,7 @@
 .homedesciption{
     padding-top: 10px;
     font-size: 20px;
+    
     /* text-align: center; */
 }
 .img-con{
@@ -85,4 +86,10 @@
 }
 .data-con{
     width: 200px;
+}
+.main-card-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
