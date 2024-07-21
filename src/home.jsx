@@ -78,9 +78,9 @@ function Home() {
                 <div className='d-flex flex-row justify-content-between'>
                     
                     
-                    <div className='pl-5 d-flex flex-column justify-content-center'>
+                    <div className='d-flex flex-column justify-content-center text-center'>
                 <h1 className='text-white headhome'>The Impact of Effective Blog Post Intros</h1>
-               <p className='homedesciption pl-5 pt-3'>Captivating introductions are crucial for blog posts,
+               <p className='homedesciption'>Captivating introductions are crucial for blog posts,
                  setting the tone and grabbing readers' attention immediately. A strong opening not only engages but also
                  encourages continued reading, enhancing user experience and boosting SEO performance.</p>
                  <div>

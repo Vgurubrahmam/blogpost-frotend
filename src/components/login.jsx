@@ -81,7 +81,7 @@ function Login() {
   return (
     <div className='bg-con'>
       <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div className="container-fluid">
+        <div className="container-fluid d-flex flex-row justify-content-around">
           <Link className="navbar-brand " href="#" to="/">
             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPEZqhsKryXAUsw_IlZPBsKohWQNGrdX_AWILuvmLV4Z33sVLpNME9bQPgnisEhwiQR1U&usqp=CAU' className='logoimage' alt='logo' />
           </Link>
@@ -115,7 +115,7 @@ function Login() {
         </div>
       </nav>
       <hr className='w-100' />
-      <div className="login-con  d-flex flex-column justify-content-center w-50">
+      <div className="login-con  d-flex flex-column justify-content-center">
         <h1 className="font-Lato text-white">Sign In</h1>
         <section>
           <form onSubmit={handleSubmit} className=''>

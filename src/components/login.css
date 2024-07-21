@@ -54,8 +54,7 @@
 a{
     
     text-decoration: none;
-    padding: 0;
-    margin: 0;
+   
 }
 .success{
     color: rgb(9, 102, 71);
@@ -67,8 +66,9 @@ a{
     font-size:50px;
 }
 .logoimage{
-    height: 74px;
-    width:200%;
+    /* height: 74px; */
+    /* width:200%; */
+    /* display: none; */
     
 }
 @media (min-width:767px){
@@ -99,7 +99,7 @@ a{
         color: black;
         padding: 30px;
         
-        
+        display: none;
         
     }
 }

@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+@media (max-width:768px ){
+    
 
 .bg-container{
     /* background-color: black; */
@@ -6,8 +8,21 @@
     height:auto;
     text-align: center;
     padding-top: 30px;
-    width: 100vw;
-    
+    width:100vw;
+    padding: 20px;
+    /* text-align: left; */
+}
+}
+@media (min-width:767px){
+   .bg-container{
+    width: 120vw;
+    margin-top: 100px;
+    height:auto;
+    text-align: center;
+    padding-top: 30px;
+    width:100vw;
+    padding: 20px;
+   }
 }
 .headhome{
     font-family: "roboto";
@@ -19,6 +34,7 @@
 .homedesciption{
     width: 520px;
     font-size: 20px;
+    /* text-align: center; */
 }
 .img-con{
     background-image: url("https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg?size=626&ext=jpg&ga=GA1.1.1134535102.1718039641&semt=ais_user");
@@ -49,4 +65,7 @@
 }
 .limited-height::-webkit-scrollbar {
     display: none;
+}
+.data-con{
+    width: 200px;
 }
