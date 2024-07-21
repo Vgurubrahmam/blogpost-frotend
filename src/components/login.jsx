@@ -115,10 +115,10 @@ function Login() {
         </div>
       </nav>
       <hr className='w-100' />
-      <div className="login-con  d-flex flex-column justify-content-center ">
+      <div className="login-con  d-flex flex-column justify-content-center w-50">
         <h1 className="font-Lato text-white">Sign In</h1>
         <section>
-          <form onSubmit={handleSubmit} className='w-100'>
+          <form onSubmit={handleSubmit} className=''>
             <label className="labelstyle text-white" htmlFor="email">Enter Email</label>
             <input
               type="email"
