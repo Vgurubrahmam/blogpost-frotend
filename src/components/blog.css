@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.blog-container{
+    background-color:#fff;
+    height: 300px;
+    padding-top: 40px;
+   
+   }
+.logoimage{
+    height: 74px;
+    width:200%;
+}
+.images-navagate{
+   
+    height: 300px;
+}
+.navbar-brand{
+    padding-left: 200px;
+    font-size:2rem;
+    font-weight: bold;
+    font-family: "Roboto";
+}
+.list-group-item {
+     width: 200px;
+     margin-right: 14px;
+   
+} 
+.logoimg{
+    height:60px;
+    width:200px;
+}
+.singlecard{
+    height: 300px;
+    width: 400px;
+    background-color: black;
+
+}
+.card{
+    width: 300px;
+    height: auto;
+   
+    margin-top: 20px;
+    
+}
+
+.sticky-sidebar {
+    height: 100vh;
+    width: 250px;
+    background:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 0px;
+    align-items: center;
+    overflow-y: auto;
+    padding-top: 50px;
+    flex-shrink: 3;
+  }
+  .cards-data{
+    height: 100vh;
+    background: #ffffff;
+    flex-grow: 1;
+    font-family: "Roboto";
+    padding: 20px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+
+  }
+  .cards-data::-webkit-scrollbar {
+    display: none;
+  }
+
+/* .blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}*/
+
+
+
+
+.content {
+    display: flex;
+    width: 100%;
+   
+  }
+.card-img-top{
+    height: 150px;
+}
+.limited-height{
+    max-height: 100px;
+    overflow-y: auto;
+    border:none;
+    padding: 10px;
+   
+}
+.limited-height::-webkit-scrollbar {
+    display: none;
+}
+.profileimg{
+    width: 50px;
+}
+.profileimgdetail{
+    width: 80px;
+}
+
+/* .update-con */
+.update-con{
+    background-color:white;
+   text-align: center;
+    margin: 40px;
+    font-family: "roboto";
+    height: 100vh;
+}
+.detail-post-container {
+    margin: 50px auto; 
+    max-width: 800px; 
+    padding: 20px;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    background-color: #fff; 
+}  
+.username{
+    font-size: 12px;
+    font-weight:700;
+}
+.card-body{
+    flex-grow: 1;
+
+}

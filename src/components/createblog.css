@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.create-container{
+    border-radius: 8px;
+    border-width:0px;
+    border:solid;
+    border-color:transparent;
+    width: 40%;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    color: black;
+    padding: 30px;
+    /* background: linear-gradient(to bottom,#E49BFF, #615EFC);  */
+    
+
+}
+.label-css{
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+.gradient{
+    /* background: linear-gradient(to bottom,#E49BFF, #615EFC);  */
+    border-radius: 5px;
+    /* box-shadow: 5px 2px 5px 2px whitesmoke; */
+}
+.heading{
+    font-family:"Lato";
+}
+.list-group-item {
+    width: 200px;
+    margin-left: 16px;
+    
+}
+/* .logoimage{
+    height: 74px;
+    width:200%;
+} */
