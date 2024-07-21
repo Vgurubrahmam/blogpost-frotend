@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function Login() {
   const navigate = useNavigate();
   // const { token, setToken } = useContext(TokenContext); 
+  const [showPassword ,setShowPassword] = useState(false)
 
   const [usecred, setUsecred] = useState({
     email: "",
@@ -77,7 +78,9 @@ function Login() {
       console.error('Error:', error);
     });
   }
-
+function togglePasswordVisibility(){
+  setShowPassword((prevState)=>!prevState)
+}
   return (
     <div className='bg-con'>
       <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
@@ -97,7 +100,7 @@ function Login() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse justify-content-end mr-5" id="navbarNavAltMarkup">
-            <div className="navbar-nav justify-content-around w-50">
+            <div className="navbar-nav justify-content-around w-50 ml-4">
               <Link className="nav-link active text-black-50 fw-bold" aria-current="page" href="#" to="/">
                 Home
               </Link>
@@ -132,17 +135,29 @@ function Login() {
               required
             />
             <label className="labelstyle text-white" htmlFor="password">Enter Password</label>
-            <input
-              type='password'
-              className="form-control"
-              name="password"
-              id='password'
-              placeholder='Enter password'
-              value={usecred.password}
-              onChange={handleInput}
-              required
-            />
+            <div className="input-group mb-3">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    className="form-control"
+                    id="password"
+                    name="password"
+                    placeholder="Enter password"
+                    required
+                    value={usecred.password}
+                    onChange={handleInput}
+                  />
+                  <div className="input-group-append">
+                    <button
+                      type="button"
+                      className="btn btn-outline-none bg-white text-dark"
+                      onClick={togglePasswordVisibility}
+                    >
+                      <i className={`fa ${showPassword ? "fa-eye-slash" : "fa-eye"}`}></i>
+                    </button>
+                  </div>
+                </div>
             <button type="submit" className="buttonlogin btn btn-danger fw-bold mt-5 p-2 w-100">Login</button>
+            
           </form>
         </section>
         <div className="orcon">

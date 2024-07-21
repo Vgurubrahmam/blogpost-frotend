@@ -55,7 +55,7 @@ function Blog() {
   };
 
   const handleDelete = (blog) => {
-    fetch(`https://blogpost-backend-wheat.vercel.app/${blog._id}`, {
+    fetch(`https://blogpost-backend-wheat.vercel.app/deletepost/${blog._id}`, {
       method: "DELETE",
     })
       .then(() => {
@@ -286,7 +286,7 @@ function Blog() {
 
               {/* blog cards */}
           
-              <div className="col-md-9 cards-data">
+              <div className="col-md-9 cards-data align-items-center">
                 <div className="row">
                   {blogs.map((blog, index) => (
                     <div className="col-lg-4 col-md-6 mb-4" key={index}>

@@ -6,7 +6,7 @@
 }
 .bg-con {
     background-image: url("https://img.freepik.com/free-vector/gradient-technology-background_23-2148884153.jpg?t=st=1718528555~exp=1718532155~hmac=9dc13ffeb47c233940c1c61f9a9e8d429da4124aba7db983244a5b81a3c85345&w=900");
-    height: 100vh;
+    height: auto;
     background-size: cover;
     padding-bottom: 20px;
     

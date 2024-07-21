@@ -11,11 +11,17 @@ function Signup() {
     password: "",
   });
 
+  const [showPassword, setShowPassword] = useState(false);
+
   function handleInput(event) {
     setUserDetails((prevState) => ({
       ...prevState,
       [event.target.name]: event.target.value,
     }));
+  }
+
+  function togglePasswordVisibility() {
+    setShowPassword((prevState) => !prevState);
   }
 
   function handleSubmit(event) {
@@ -30,10 +36,10 @@ function Signup() {
     })
       .then((response) => {
         if (response.status === 400) {
-          throw new Error('Email or username already exists.');
+          throw new Error("Email or username already exists.");
         }
         if (!response.ok) {
-          throw new Error('Error registering user.');
+          throw new Error("Error registering user.");
         }
         return response.json();
       })
@@ -47,7 +53,7 @@ function Signup() {
           draggable: true,
           progress: undefined,
         });
-    
+
         setUserDetails({
           name: "",
           email: "",
@@ -65,7 +71,6 @@ function Signup() {
           progress: undefined,
         });
       });
-    
   }
 
   return (
@@ -109,7 +114,7 @@ function Signup() {
                 </label>
                 <div className="input-group mb-3">
                   <input
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     className="form-control"
                     id="password"
                     name="password"
@@ -118,7 +123,15 @@ function Signup() {
                     value={userDetails.password}
                     onChange={handleInput}
                   />
-                  
+                  <div className="input-group-append">
+                    <button
+                      type="button"
+                      className="btn btn-inline-secondary bg-white text-dark border border-secondary"
+                      onClick={togglePasswordVisibility}
+                    >
+                      <i className={`fa ${showPassword ? "fa-eye-slash" : "fa-eye"}`}></i>
+                    </button>
+                  </div>
                 </div>
 
                 <div className="d-flex justify-content-center">
@@ -133,13 +146,9 @@ function Signup() {
               <p className="labelstyle">OR</p>
             </div>
 
-            
-              
-              <Link to="/login" className="text-white">
-              <button className="btn btn-secondary w-100 fw-bold">Already have an account?Login</button>
-                
-              </Link>
-            
+            <Link to="/login" className="text-white">
+              <button className="btn btn-secondary w-100 fw-bold">Already have an account? Login</button>
+            </Link>
           </div>
         </div>
         <div className="col-lg-6 col-md-8 col-sm-10 col-12">
