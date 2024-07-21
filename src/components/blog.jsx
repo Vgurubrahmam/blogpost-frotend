@@ -74,9 +74,24 @@ function Blog() {
       });
   };
   const formatDate = (dateString) => {
-    const options = { day: "2-digit", month: "2-digit", year: "numeric" };
-    return new Date(dateString).toLocaleDateString("GB", options);
+    const date = new Date(dateString);
+    const dateOptions = { day: "2-digit", month: "2-digit", year: "numeric" };
+    const formattedDate = date.toLocaleDateString("en-GB", dateOptions);
+  
+    return `${formattedDate}`;
   };
+  
+    
+    const formatTime = (dateString) => {
+      const date = new Date(dateString);
+      const timeOptions = { hour: "2-digit", minute: "2-digit", second: "2-digit" };
+      const formattedTime = date.toLocaleTimeString("en-GB", timeOptions);
+      return `${formattedTime}`;
+    };
+    
+   
+    
+ 
 
   // details view
   const handleDetailviewbtn = (index) => {
@@ -315,6 +330,9 @@ function Blog() {
                               <p className="card-text fw-bold">
                                 {formatDate(blog.createdAt)}
                               </p>
+                              <p className="card-text fw-bold">
+                                {formatTime(blog.createdAt)}
+                              </p>
                             </div>
                           </div>
                           <h5
@@ -478,10 +496,12 @@ function Blog() {
     <div className="modal-content">
       <div className="modal-header">
       
-      {/* <h5 className="modal-title" id="staticBackdropLabel">
-          {updatepost.userId.name}<br></br>
-          <span className="fs-6 text-muted fw-bold">UpdatedAt : {formatDate(updatepost.updatedAt)}</span>
-        </h5>  */}
+      <h5 className="modal-title" id="staticBackdropLabel">
+         {/* {updatepost.userId.name}<br></br> */}
+          <span className="fs-6 text-muted fw-bold">UpdatedAt : {formatDate(updatepost.updatedAt)}</span><br></br>
+          <span className="fs-6 text-muted fw-bold">{formatTime(updatepost.updatedAt)}</span>
+
+        </h5> 
                  
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
