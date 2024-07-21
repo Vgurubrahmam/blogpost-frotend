@@ -38,3 +38,9 @@
     height: 74px;
     width:200%;
 } */
+ @media (max-width:768px) {
+    .create-container{
+        width: 100vw;
+    
+    }
+ }

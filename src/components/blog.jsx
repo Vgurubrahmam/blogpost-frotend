@@ -130,8 +130,8 @@ function Blog() {
       {!selectedPost && (
         <div>
           <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-            <div className="container-fluid">
-              <Link className="navbar-brand" href="#">
+            <div className="container">
+              <Link className="navbar-brand p-0" href="#">
                 <Link to="/"><img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPEZqhsKryXAUsw_IlZPBsKohWQNGrdX_AWILuvmLV4Z33sVLpNME9bQPgnisEhwiQR1U&usqp=CAU"
                   className="logoimg"
@@ -181,7 +181,7 @@ function Blog() {
             </div>
           </nav>
 
-         <div className="blog-container mt-5 pb-5">
+         <div className="blog-container mt-5">
             <div
               id="carouselExampleFade"
               className="carousel slide carousel-fade"
@@ -237,8 +237,8 @@ function Blog() {
               </button>
             </div>
             </div>
-            <div className="content mt-3">
-              <div className="sticky-sidebar">
+            <div className="content">
+              <div className="sticky-sidebar d-none d-md-flex">
                 <Link
                   to="/createblog"
                   className="text-white text-decoration-none"
@@ -279,6 +279,10 @@ function Blog() {
                   </button>
                 </div>
               </div>
+              <div className='text-start mt-5 d-md-none ml-5'>
+                    <input className='text-left searchpost text-secondary w-50' type='search' placeholder='Search Post Category..' />
+                    
+                </div>
 
               {/* blog cards */}
           
@@ -286,7 +290,7 @@ function Blog() {
                 <div className="row">
                   {blogs.map((blog, index) => (
                     <div className="col-lg-4 col-md-6 mb-4" key={index}>
-                      <div className="card h-100">
+                      <div className="card h-auto">
                         <img
                           src={blog.imageurl}
                           className="card-img-top"
@@ -314,7 +318,7 @@ function Blog() {
                             </div>
                           </div>
                           <h5
-                            className="card-title"
+                            className="card-title fw-bold"
                             onChange={handlesubmitchange}
                           >
                             {blog.title}
@@ -333,7 +337,7 @@ function Blog() {
                           >
                             {blog.description}
                           </p>
-                          <div className=" mt-auto d-flex flex-spacebetween justify-content-between">
+                          <div className=" mt-4 d-flex flex-spacebetween justify-content-between">
                             <div className="">
                               <Link
                                 to="#"
@@ -402,7 +406,7 @@ function Blog() {
           <Link onClick={handlebackbtn} className="fw-bold fs-5  text-secondary text-decoration-none"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
 </svg>Back</Link>
-          <div className="update-con ">
+          <div className="update-con">
             
             <h1 className="m-4 fw-bold">Detail view Post</h1>
 
@@ -415,11 +419,11 @@ function Blog() {
                 <div>
                   <img
                     src="https://img.freepik.com/premium-photo/male-female-profile-avatar-user-avatars-gender-icons_1020867-75336.jpg"
-                    className="profileimgdetail ml-5 mt-4"
+                    className="profileimgdetail mb-4 mt-2"
                   ></img>
                 </div>
 
-                <div className="m-4">
+                <div className="user-detail">
                   <p className="username fs-4">{selectedPost.userId.name}</p>
                   <p className="card-text fw-bold">
                     {formatDate(selectedPost.createdAt)}
@@ -429,23 +433,23 @@ function Blog() {
 
               <label
                 htmlFor="title"
-                className="label-css mt-3 pl-5 text-secondary"
+                className="label-css text-secondary"
               >
                 Title
               </label>
 
-              <h5 className="fw-bold pl-5">{selectedPost.title}</h5>
-              <label className="label-css mt-3 pl-5 text-secondary">
+              <h5 className="fw-bold">{selectedPost.title}</h5>
+              <label className="label-css text-secondary">
                 Category
               </label>
-              <p className="pl-5 fs-5 fw-500">{selectedPost.category}</p>
+              <p className=" fs-5 fw-500">{selectedPost.category}</p>
               <label
                 htmlFor="description"
-                className="label-css mt-3 pl-5 text-secondary"
+                className="label-css  text-secondary"
               >
                 Description
               </label>
-              <p className="pl-5 fs-5 ">{selectedPost.description}</p>
+              <p className="  detail-des">{selectedPost.description}</p>
 
               <div className="mt-5 d-flex flex-row justify-content-end">
                 <button
