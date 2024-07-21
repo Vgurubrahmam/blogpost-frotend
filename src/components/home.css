@@ -15,12 +15,12 @@
 }
 @media (min-width:767px){
    .bg-container{
-    width: 120vw;
+    width: 130vw;
     margin-top: 100px;
     height:auto;
     text-align: center;
     padding-top: 30px;
-    width:100vw;
+    
     padding: 20px;
    }
 }

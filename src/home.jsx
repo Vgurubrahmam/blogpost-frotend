@@ -88,7 +88,7 @@ function Home() {
                  </div>
                     </div>
                     <div className='d-flex flex-column justify-content-center img-con rounded shadow-lg d-none d-md-block'>
-                   <Link className='text-white text-decoration-none' to="/login"> <button className="btn btn-dark mt-3 fw-bold  mr-2 sticky">Get Started</button></Link>
+                   <Link className='text-white text-decoration-none' to="/login"> <button className="btn btn-dark mt-3 fw-bold  mr-2 sticky fs-6">Get Started</button></Link>
                     </div>
                     
                 </div>

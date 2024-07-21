@@ -1,105 +1,105 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
-.bg-con{
+.bg-con {
     background-image: url("https://img.freepik.com/free-vector/gradient-technology-background_23-2148884153.jpg?t=st=1718528555~exp=1718532155~hmac=9dc13ffeb47c233940c1c61f9a9e8d429da4124aba7db983244a5b81a3c85345&w=900");
-    height:100vh;
+    height: auto;
     background-size: cover;
+    padding-bottom: 20px;
+    
 }
 
-
-.signup-con{
+.signup-con {
     border-radius: 8px;
-    
     width: 90%;
     height: auto;
-    /* margin-left: auto;
-    margin-right: auto; */
     margin-top: 10px;
     color: black;
     padding: 30px;
-    /* background: linear-gradient(to bottom, #ff7e5f, #feb47b); */
-    
-    
 }
-.signupimg{
+
+.signupimg {
     height: 100vh;
-    width:90%;
+    width: 90%;
     margin-top: 20px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    
 }
 
-.logoimg{
+.logoimg {
     width: 200px;
 }
-.labelstyle{
+
+.labelstyle {
     color: black;
-  
     font-size: 18px;
     font-weight: 500;
     padding-top: 20px;
     padding-left: 10px;
 }
-.buttonlogin{
+
+.buttonlogin {
     font-weight: 500;
     font-size: 20px;
     color: aliceblue;
-    direction: none;
 }
-.orcon{
+
+.orcon {
     text-align: center;
     margin: 10px;
 }
-a{
-    
+
+a {
     text-decoration: none;
-   
+    
 }
-.success{
+
+.success {
     color: rgb(9, 102, 71);
     font-weight: 600;
-    padding:20px;
+    padding: 20px;
 }
-.navbar-brand{
-    font-family: "";
-    font-size:50px;
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif; /* Set to a valid font-family */
+    font-size: 50px;
 }
-.logoimage{
-    /* height: 74px; */
-    /* width:200%; */
-    /* display: none; */
-    
+
+.logoimage {
+    height: 74px;
+    width: 200px; /* Ensure this is intended */
 }
-@media (min-width:767px){
-    .login-con{
+
+@media (min-width: 767px) {
+    .login-con {
         border-radius: 8px;
-        box-shadow:5px 0px 10px 10px;
+        box-shadow: 5px 0px 10px 10px;
         width: 70%;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 100px;
-        color: black;
-        padding: 30px;
-        
-        
-        
-    }
-}
-@media (max-width:768px){
-    .login-con{
-        border-radius: 8px;
-        box-shadow:5px 0px 10px 10px;
-        width: 50%;
         height: auto;
         margin-left: auto;
         margin-right: auto;
         margin-top: 200px;
         color: black;
         padding: 30px;
-        
-        display: none;
-        
+        margin-bottom: 10px;
     }
+}
+
+@media (max-width: 768px) {
+    .login-con {
+        border-radius: 8px;
+        box-shadow: 5px 0px 10px 10px;
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:150px;
+        color: black;
+        padding: 30px;
+        display: none;
+        margin-bottom: 10px;
+    }
+}
+
+button{
+    font-size: 1.25rem;
 }
