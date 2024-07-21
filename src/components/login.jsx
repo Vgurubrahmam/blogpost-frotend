@@ -81,8 +81,8 @@ function Login() {
   return (
     <div className='bg-con'>
       <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div className="container-fluid d-flex flex-row justify-content-around">
-          <Link className="navbar-brand " href="#" to="/">
+        <div className="container">
+          <Link className="navbar-brand p-0" href="#" to="/">
             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPEZqhsKryXAUsw_IlZPBsKohWQNGrdX_AWILuvmLV4Z33sVLpNME9bQPgnisEhwiQR1U&usqp=CAU' className='logoimage' alt='logo' />
           </Link>
           <button

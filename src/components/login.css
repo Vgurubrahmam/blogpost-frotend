@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
+*{
+    padding: 0;
+    margin: 0;
+}
 .bg-con {
     background-image: url("https://img.freepik.com/free-vector/gradient-technology-background_23-2148884153.jpg?t=st=1718528555~exp=1718532155~hmac=9dc13ffeb47c233940c1c61f9a9e8d429da4124aba7db983244a5b81a3c85345&w=900");
     height: auto;
@@ -10,7 +14,7 @@
 
 .signup-con {
     border-radius: 8px;
-    width: 90%;
+    width: 100%;
     height: auto;
     margin-top: 10px;
     color: black;
@@ -69,15 +73,15 @@ a {
     width: 200px; /* Ensure this is intended */
 }
 
-@media (min-width: 767px) {
+@media (min-width: 769px) {
     .login-con {
         border-radius: 8px;
         box-shadow: 5px 0px 10px 10px;
-        width: 70%;
+        width: 30%;
         height: auto;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 200px;
+        margin-top: 150px;
         color: black;
         padding: 30px;
         margin-bottom: 10px;
@@ -88,7 +92,7 @@ a {
     .login-con {
         border-radius: 8px;
         box-shadow: 5px 0px 10px 10px;
-        width: 50%;
+        width: 70%;
         height: auto;
         margin-left: auto;
         margin-right: auto;

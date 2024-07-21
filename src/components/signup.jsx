@@ -69,10 +69,10 @@ function Signup() {
   }
 
   return (
-    <div className="container d-flex flex-row justify-content-center">
-      <div className="row justify-content-center align-items-center min-vh-100">
+    <div className="container d-flex flex-row justify-content-around">
+      <div className="row justify-content-between align-items-center min-vh-100">
         <div className="col-lg-6 col-md-8 col-sm-10 col-12 mb-4">
-          <div className="signup-con shadow-lg p-4 ">
+          <div className="signup-con shadow-lg">
             <h1 className="text-center mb-4">Sign Up</h1>
             <section>
               <form onSubmit={handleSubmit}>
