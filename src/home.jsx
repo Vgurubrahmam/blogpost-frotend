@@ -36,11 +36,13 @@ function Home() {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top mb-5">
-                <div className="container-fluid">
-                    <Link className="navbar-brand" href="#">
+            <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top mb-5 ">
+                <div className="container">
+                    <div>
+                    <Link className="navbar-brand p-0" href="#">
                         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPEZqhsKryXAUsw_IlZPBsKohWQNGrdX_AWILuvmLV4Z33sVLpNME9bQPgnisEhwiQR1U&usqp=CAU' className='logoimage' alt='logo' />
                     </Link>
+                    </div>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -75,28 +77,28 @@ function Home() {
             </nav>
 
             <div className='bg-container bg-secondary text-white'>
-                <div className='d-flex flex-row justify-content-around'>
+            <div className='d-flex flex-row justify-content-between'>
                     
                     
-                    <div className='d-flex flex-column justify-content-center text-center'>
+                      <div className='col-md-6  d-flex flex-column justify-content-center text-center'>
                 <h1 className='text-white headhome'>The Impact of Effective Blog Post Intros</h1>
                <p className='homedesciption'>Captivating introductions are crucial for blog posts,
-                 setting the tone and grabbing readers' attention immediately. A strong opening not only engages but also
+                setting the tone and grabbing readers' attention immediately. A strong opening not only engages but also
                  encourages continued reading, enhancing user experience and boosting SEO performance.</p>
                  <div>
-                 <Link className='text-white text-decoration-none' to="/login"><button className="btn btn-dark mt-3 fw-bold  ml-auto mr-auto d-block d-md-none ">Get Started </button></Link>
-                 </div>
-                    </div>
-                    <div className='d-flex flex-column justify-content-center img-con rounded shadow-lg d-none d-md-block'>
-                   <Link className='text-white text-decoration-none' to="/login"> <button className="btn btn-dark mt-3 fw-bold  mr-2 sticky fs-6">Get Started</button></Link>
+            <Link className='text-white text-decoration-none' to="/login"><button className="btn btn-dark mt-3 fw-bold  ml-auto mr-auto d-block d-md-none ">Get Started </button></Link>
+              </div>
+                     </div>
+                     <div className='d-flex flex-column justify-content-center img-con rounded shadow-lg d-none d-md-block'>
+                    <Link className='text-white text-decoration-none' to="/login"> <button className="btn btn-dark mt-3 fw-bold  mr-2 sticky fs-6">Get Started</button></Link>
                     </div>
                     
                 </div>
-                {/* //searchinput */}
+                
                 <div className='text-start m-5'>
-                    <input className='text-left searchpost text-secondary ' type='search' placeholder='Search Post Category..' />
+                    <input className='text-left searchpost text-secondary' type='search' placeholder='Search Post Category..' />
                 </div>
-                {/* cards */}
+                
                 <div className="col-md-12">
                     <div className="row">
                         {blogs.map((blog, index) => (
@@ -121,7 +123,7 @@ function Home() {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div> 
             <ToastContainer
                 position="bottom-left"
                 autoClose={5000}

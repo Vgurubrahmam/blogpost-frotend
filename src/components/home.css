@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+}
+
 @media (max-width:768px ){
     
 
@@ -8,9 +13,20 @@
     height:auto;
     text-align: center;
     padding-top: 30px;
-    width:130vw;
+    width:100vw;
     padding: 20px;
     /* text-align: left; */
+}
+.searchpost{
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    position:-webkit-sticky;
+    top: 0;
+    font-weight: 500;
+    border: solid;
+    outline: none;
+    
 }
 }
 @media (min-width:769px){
@@ -23,16 +39,27 @@
     
     padding: 20px;
    }
+   .searchpost{
+    width: 30%;
+    padding: 10px;
+    border-radius: 8px;
+    position:-webkit-sticky;
+    top: 0;
+    font-weight: 500;
+    border: solid;
+    outline: none;
+    
+}
 }
 .headhome{
     font-family: "roboto";
-    width: 500px;
+    
     padding-top: 50px;
     font-weight: bold;
    
 }
 .homedesciption{
-    width: 520px;
+    padding-top: 10px;
     font-size: 20px;
     /* text-align: center; */
 }
@@ -45,17 +72,7 @@
     background-size: cover;
     padding-top: 55px;
 }
-.searchpost{
-    width: 350px;
-    padding: 10px;
-    border-radius: 8px;
-    position:-webkit-sticky;
-    top: 0;
-    font-weight: 500;
-    border: solid;
-    outline: none;
-    
-}
+
 .limited-height{
     max-height: 100px;
     overflow-y: auto;
