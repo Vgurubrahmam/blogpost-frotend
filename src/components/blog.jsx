@@ -153,7 +153,7 @@ function Blog() {
                 className="collapse navbar-collapse justify-content-end mr-5"
                 id="navbarNavAltMarkup"
               >
-                <div className="navbar-nav justify-content-around w-50">
+                <div className="navbar-nav justify-content-around w-50 ml-4">
                   <Link
                     className="nav-link active text-black-50 fw-bold"
                     aria-current="page"
