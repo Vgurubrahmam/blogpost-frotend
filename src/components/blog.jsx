@@ -349,7 +349,7 @@ function Blog() {
                           </p>
 
                           <p
-                            className="card-text limited-height"
+                            className="card-text limited-height fs-6"
                             onChange={handlesubmitchange}
                           >
                             {blog.description}
@@ -466,7 +466,7 @@ function Blog() {
               >
                 Description
               </label>
-              <p className="  detail-des">{selectedPost.description}</p>
+              <p className="  detail-des fs-6">{selectedPost.description}</p>
 
               <div className="mt-5 d-flex flex-row justify-content-end">
                 <button
