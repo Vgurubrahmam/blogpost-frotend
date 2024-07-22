@@ -55,24 +55,23 @@ function Blog() {
   };
 
   const handleDelete = (blog) => {
-    fetch(`https://blogpost-backend-wheat.vercel.app/deletepost/${blog._id}`, {
-      method: "DELETE",
-    })
-      .then(() => {
-        
-       let data= window.confirm("Are You Ready to Delete")
-        if(data == true){
-          fetchData();
-          
-        }
-        else{
-          console.log("delete cancelled");
-        }
+    let data = window.confirm("Are You Ready to Delete");
+  
+    if (data) {
+      fetch(`https://blogpost-backend-wheat.vercel.app/deletepost/${blog._id}`, {
+        method: "DELETE",
       })
-      .catch((error) => {
-        console.error("Error deleting post", error);
-      });
+        .then(() => {
+          fetchData();
+        })
+        .catch((error) => {
+          console.error("Error deleting post", error);
+        });
+    } else {
+      console.log("Delete cancelled");
+    }
   };
+  
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     const dateOptions = { day: "2-digit", month: "2-digit", year: "numeric" };
@@ -496,10 +495,10 @@ function Blog() {
     <div className="modal-content">
       <div className="modal-header">
       
-      <h5 className="modal-title" id="staticBackdropLabel">
+      <h5 className="modal-title" id="staticBackdropLabel ">
          {/* {updatepost.userId.name}<br></br> */}
-          <span className="fs-6 text-muted fw-bold">UpdatedAt : {formatDate(updatepost.updatedAt)}</span><br></br>
-          <span className="fs-6 text-muted fw-bold">{formatTime(updatepost.updatedAt)}</span>
+          <span className="update-date fw-bold">UpdatedAt : {formatDate(updatepost.updatedAt)}</span><br></br>
+          <span className="update-date fw-bold">{formatTime(updatepost.updatedAt)}</span>
 
         </h5> 
                  
@@ -507,8 +506,8 @@ function Blog() {
       </div>
       <div className="modal-body">
       <div className="updatePostDiv">
-          <div className="update-con ">
-            <h1 className="m-4 fw-bold fixed-top">Update Post</h1>
+          <div className="update-con">
+            <h1 className="m-4 fw-bold fixed-top text-end pr-5">Update Post</h1>
             <img
               src={updatepost.imageurl}
               className="img-fluid rounded updateimg"

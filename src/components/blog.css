@@ -175,3 +175,6 @@ p {
    display: flex;
    flex-direction: row;
 }
+.update-date{
+    font-size: 10px;
+}
