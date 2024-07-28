@@ -111,26 +111,32 @@ function Home() {
 
                 <div className="main-card-con">
                     <div className="row">
-                        {filteredBlogs.map((blog, index) => (
-                            <div className="col-lg-4 col-md-6 mb-4" key={index}>
-                                <div className="card h-100">
-                                    <img
-                                        src={blog.imageurl}
-                                        className="card-img-top"
-                                        alt={blog.title}
-                                    />
-                                    <div className="card-body d-flex flex-column">
-                                        <h5 className="card-title text-start fw-bold">{blog.title}</h5>
-                                        <p className="card-text limited-height">{blog.description}</p>
-                                        <div className='mt-3'>
-                                            <Link to="#" className="btn btn-secondary">
-                                                {blog.category}
-                                            </Link>
+                        {filteredBlogs.length > 0 ? (
+                            filteredBlogs.map((blog, index) => (
+                                <div className="col-lg-4 col-md-6 mb-4" key={index}>
+                                    <div className="card h-100">
+                                        <img
+                                            src={blog.imageurl}
+                                            className="card-img-top"
+                                            alt={blog.title}
+                                        />
+                                        <div className="card-body d-flex flex-column">
+                                            <h5 className="card-title text-start fw-bold">{blog.title}</h5>
+                                            <p className="card-text limited-height">{blog.description}</p>
+                                            <div className='mt-3'>
+                                                <Link to="#" className="btn btn-secondary">
+                                                    {blog.category}
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            ))
+                        ) : (
+                            <div className="col-12 text-center">
+                                <h5 className="text-white">Post not found</h5>
                             </div>
-                        ))}
+                        )}
                     </div>
                 </div>
             </div>
