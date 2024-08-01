@@ -144,9 +144,9 @@ function Blog() {
       
       
   };
-  const handleSearchChange=(e)=>{
-    setSearchItem(e.target.value)
-}
+//   const handleSearchChange=(e)=>{
+//     setSearchItem(e.target.value)
+// }
 const filteredBlogs=blogs.filter(blog=>blog.category.toLowerCase().includes(searchItem.toLowerCase()))
   return (
     <div>
