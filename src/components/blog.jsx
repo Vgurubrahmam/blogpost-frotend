@@ -144,9 +144,9 @@ function Blog() {
       
       
   };
-//   const handleSearchChange=(e)=>{
-//     setSearchItem(e.target.value)
-// }
+  const handleSearchChange=(e)=>{
+    setSearchItem(e.target.value)
+}
 const filteredBlogs=blogs.filter(blog=>blog.category.toLowerCase().includes(searchItem.toLowerCase()))
   return (
     <div>
@@ -154,13 +154,11 @@ const filteredBlogs=blogs.filter(blog=>blog.category.toLowerCase().includes(sear
         <div>
           <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
             <div className="container">
-              <Link className="navbar-brand p-0" href="#">
-                <Link to="/"><img
+            <Link to="/" className="navbar-brand p-0"><img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPEZqhsKryXAUsw_IlZPBsKohWQNGrdX_AWILuvmLV4Z33sVLpNME9bQPgnisEhwiQR1U&usqp=CAU"
                   className="logoimg"
                   alt="logo"
                 /></Link>
-              </Link>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -312,8 +310,8 @@ const filteredBlogs=blogs.filter(blog=>blog.category.toLowerCase().includes(sear
               <div className="col-md-9 cards-data align-items-center">
                 <div className="row">
                   {filteredBlogs.length>0?(
-filteredBlogs.map((blog) => (
-  <div className="col-lg-4 col-md-6 mb-4" key={blog.id}>
+filteredBlogs.map((blog,key) => (
+  <div className="col-lg-4 col-md-6 mb-4" key={key}>
     <div className="card h-auto">
       <img
         src={blog.imageurl}
@@ -339,9 +337,9 @@ filteredBlogs.map((blog) => (
             <p className="card-text fw-bold">
               {formatDate(blog.createdAt)}
             </p>
-            <p className="card-text fw-bold">
+            {/* <p className="card-text fw-bold">
               {formatTime(blog.createdAt)}
-            </p>
+            </p> */}
           </div>
         </div>
         <h5
@@ -369,7 +367,7 @@ filteredBlogs.map((blog) => (
             <Link
               to="#"
               className="btn btn-secondary fw-bold"
-              onClick={() => handleDetailviewbtn(index)}
+              onClick={() => handleDetailviewbtn(key)}
             >
               Detail View
             </Link>
@@ -432,10 +430,10 @@ filteredBlogs.map((blog) => (
       )}
       {/* detail post */}
 
-      {selectedPost && (
+        {selectedPost && (
         <div className="datail-post-container m-5">
-          <Link onClick={handlebackbtn} className="fw-bold fs-5  text-secondary text-decoration-none"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+          <Link onClick={handlebackbtn} className="fw-bold fs-5  text-secondary text-decoration-none"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
 </svg>Back</Link>
           <div className="update-con">
             

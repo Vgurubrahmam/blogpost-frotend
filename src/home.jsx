@@ -113,7 +113,7 @@ function Home() {
                     <div className="row">
                         {filteredBlogs.length > 0 ? (
                             filteredBlogs.map((blog, index) => (
-                                <div className="col-lg-4 col-md-6 mb-4" key={index}>
+                                <div className="col-lg-4 col-md-6 mb-4 text-center" key={index}>
                                     <div className="card h-100">
                                         <img
                                             src={blog.imageurl}

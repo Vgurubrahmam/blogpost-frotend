@@ -15,7 +15,10 @@
     padding-top: 30px;
     width:100vw;
     padding: 20px;
-    /* text-align: left; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .searchpost{
     width: 100%;
@@ -27,6 +30,12 @@
     border: solid;
     outline: none;
     
+}
+.main-card-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 }
 @media (min-width:769px){
