@@ -55,23 +55,23 @@ function Blog() {
         }
   };
 
-  const handleDelete = (blog) => {
-    let data = window.confirm("Are You Ready to Delete");
+  // const handleDelete = (blog) => {
+  //   let data = window.confirm("Are You Ready to Delete");
   
-    if (data) {
-      fetch(`https://blogpost-backend-wheat.vercel.app/deletepost/${blog._id}`, {
-        method: "DELETE",
-      })
-        .then(() => {
-          fetchData();
-        })
-        .catch((error) => {
-          console.error("Error deleting post", error);
-        });
-    } else {
-      console.log("Delete cancelled");
-    }
-  };
+  //   if (data) {
+  //     fetch(`https://blogpost-backend-wheat.vercel.app/deletepost/${blog._id}`, {
+  //       method: "DELETE",
+  //     })
+  //       .then(() => {
+  //         fetchData();
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error deleting post", error);
+  //       });
+  //   } else {
+  //     console.log("Delete cancelled");
+  //   }
+  // };
   
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -116,34 +116,34 @@ function Blog() {
     });
   };
 
-  const handleUpdate = (event) => {
-    event.preventDefault();
-    console.log(updatepost)
-    fetch("https://blogpost-backend-wheat.vercel.app/updateposts/" + updatepost._id, {
-      method: "PATCH",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(updatepost),
-    })
-      .then((response) => response.json())
-      .then((blog) => {
-        console.log(blog);
-        fetchData();
+  // const handleUpdate = (event) => {
+  //   event.preventDefault();
+  //   console.log(updatepost)
+  //   fetch("https://blogpost-backend-wheat.vercel.app/updateposts/" + updatepost._id, {
+  //     method: "PATCH",
+  //     headers: {
+  //       "Content-type": "application/json",
+  //     },
+  //     body: JSON.stringify(updatepost),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((blog) => {
+  //       console.log(blog);
+  //       fetchData();
         
-        // setUpdatepost({
-        //   _id: "",
-        //   title: "",
-        //   description: "",
-        //   category: "",
-        //   imageurl: "",
-        // });
-      });
+  //       // setUpdatepost({
+  //       //   _id: "",
+  //       //   title: "",
+  //       //   description: "",
+  //       //   category: "",
+  //       //   imageurl: "",
+  //       // });
+  //     });
 
-      //serch item
+  //     //serch item
       
       
-  };
+  // };
   const handleSearchChange=(e)=>{
     setSearchItem(e.target.value)
 }
@@ -184,9 +184,9 @@ const filteredBlogs=blogs.filter(blog=>blog.category.toLowerCase().includes(sear
                   </Link>
                   <Link
                     className=" nav-link active text-black-50 fw-bold"
-                    to={"/blog"}
+                    to={"/userblogs"}
                   >
-                    Blogs
+                    User Blogs
                   </Link>
                   <Link className="nav-link active text-black-50 fw-bold" href="#">
                     Authors
@@ -362,7 +362,7 @@ filteredBlogs.map((blog,key) => (
         >
           {blog.description}
         </p>
-        <div className=" mt-4 d-flex flex-spacebetween justify-content-between">
+        <div className=" mt-4 d-flex flex-spacebetween justify-content-end">
           <div className="">
             <Link
               to="#"
@@ -372,7 +372,7 @@ filteredBlogs.map((blog,key) => (
               Detail View
             </Link>
           </div>
-          <div className="d-flex flex-row justify-content-end">
+          {/* <div className="d-flex flex-row justify-content-end">
             <button
               className="btn btn-Dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
               onClick={() => {
@@ -412,7 +412,7 @@ filteredBlogs.map((blog,key) => (
                 <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
               </svg>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
@@ -502,13 +502,13 @@ filteredBlogs.map((blog,key) => (
      
 
 {/* <!-- Modal --> */}
-<div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+{/* <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div className="modal-dialog modal-dialog-scrollable modal-fullscreen">
     <div className="modal-content">
       <div className="modal-header">
       
       <h5 className="modal-title" id="staticBackdropLabel ">
-         {/* {updatepost.userId.name}<br></br> */}
+         {updatepost.userId.name}<br></br>
           <span className="update-date fw-bold">UpdatedAt : {formatDate(updatepost.updatedAt)}</span><br></br>
           <span className="update-date fw-bold">{formatTime(updatepost.updatedAt)}</span>
 
@@ -613,7 +613,7 @@ filteredBlogs.map((blog,key) => (
       </div>
     </div>
   </div>
-</div>
+</div> */}
     </div>
   );
 }

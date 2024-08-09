@@ -8,7 +8,7 @@ import Create from "./components/createblog";
 import Update from './components/update';
 import { TokenProvider } from './components/tokencontext';
 import Authors from './components/authors';
-
+import UserProfile from './components/userblogs';
 
 function App() {
     return (
@@ -24,7 +24,7 @@ function App() {
                     <Route path='/blog' element={<Blog />}/>
                     <Route path='/authors' element={<Authors/>}/>
                     <Route path='/createblog' element={<Create />}/>
-                    
+                    <Route path='/userblogs' element={<UserProfile />}/>
 
                 </Routes>
         </Router>

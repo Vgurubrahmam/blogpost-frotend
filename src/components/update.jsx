@@ -72,7 +72,7 @@ function Update(){
             required
           />
           <div className="mt-5 d-flex flex-row justify-content-center">
-            <button className="btn btn-dark w-100 p-2 fw-bold">PUBLISG</button>
+            <button className="btn btn-dark w-100 p-2 fw-bold">PUBLISH</button>
           </div>
         </form>
         </div>
