@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './login.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { TokenContext } from './tokencontext'; 
+import Header from '../header';
 
 function Login() {
   const navigate = useNavigate();
@@ -83,40 +83,7 @@ function togglePasswordVisibility(){
 }
   return (
     <div className='bg-con'>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div className="container">
-          <Link className="navbar-brand p-0" href="#" to="/">
-            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPEZqhsKryXAUsw_IlZPBsKohWQNGrdX_AWILuvmLV4Z33sVLpNME9bQPgnisEhwiQR1U&usqp=CAU' className='logoimage' alt='logo' />
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse justify-content-end mr-5" id="navbarNavAltMarkup">
-            <div className="navbar-nav justify-content-around w-50 ml-4">
-              <Link className="nav-link active text-black-50 fw-bold" aria-current="page" href="#" to="/">
-                Home
-              </Link>
-              <Link className="nav-link active text-black-50 fw-bold" href="#" onClick={()=>{toast.error("Please Sign Now")}}>
-                Createblog
-              </Link>
-              <Link className="nav-link active text-black-50 fw-bold" href="#" onClick={()=>{toast.error("Please Sign Now")}}>
-                Blogs
-              </Link>
-              <button className="btn btn-secondary fw-bold" onClick={() => navigate("/signup")}>
-                <span className="text-white text-decoration-none">Signup</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header/>
       <hr className='w-100' />
       <div className="login-con  d-flex flex-column justify-content-center">
         <h1 className="font-Lato text-white">Sign In</h1>

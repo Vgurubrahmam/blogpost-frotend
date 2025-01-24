@@ -3,9 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './components/home.css';
-import Login from './components/login';
-import Create from './components/createblog';
-
+import Header from './header';
 function Home() {
     const navigate = useNavigate();
     const [blogs, setBlogs] = useState([]);
@@ -42,47 +40,11 @@ function Home() {
     const filteredBlogs = blogs.filter(blog =>
         blog.category.toLowerCase().includes(searchTerm.toLowerCase())
     );
-
+  
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top mb-5">
-                <div className="container">
-                    <div>
-                        <Link className="navbar-brand p-0" to="#">
-                            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPEZqhsKryXAUsw_IlZPBsKohWQNGrdX_AWILuvmLV4Z33sVLpNME9bQPgnisEhwiQR1U&usqp=CAU' className='logoimage' alt='logo' />
-                        </Link>
-                    </div>
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavAltMarkup"
-                        aria-controls="navbarNavAltMarkup"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse justify-content-end mr-5" id="navbarNavAltMarkup">
-                        <div className="navbar-nav justify-content-around w-50 ml-4">
-                            <Link className="nav-link active text-black-50 fw-bold" aria-current="page" to="#" onClick={() => {
-                                toast.error("Please Login Now");
-                            }}>
-                                Create
-                            </Link>
-                            <Link className="nav-link active text-black-50 fw-bold" to="#" onClick={() => {
-                                toast.error("Please Login Now");
-                            }}>
-                                Blogs
-                            </Link>
-                            <button className="btn btn-secondary fw-bold" onClick={() => navigate("/signup")}>
-                                <span className="text-white text-decoration-none">Signup</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
+                 
+<Header/>
             <div className='bg-container bg-secondary text-white'>
                 <div className='d-flex flex-row justify-content-between'>
                     <div className='col-md-6  d-flex flex-column justify-content-center text-center'>

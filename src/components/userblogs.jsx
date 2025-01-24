@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Form, Link, useNavigate } from "react-router-dom";
 import "./userblogs.css"
 function UserProfile() {
+  const navigate = useNavigate();
   const [userProfile, setUserProfile] = useState(null);
   const [userPosts, setUserPosts] = useState([]);
   const [selectedPost, setselectedPost] = useState(null);
@@ -14,7 +15,6 @@ function UserProfile() {
   });
   const [error, setError] = useState(null);
   
-  // Retrieve token from local storage or another secure place
   const token = localStorage.getItem("token");
 
   useEffect(() => {
@@ -26,7 +26,7 @@ function UserProfile() {
       const response = await fetch(`https://blogpost-backend-wheat.vercel.app/userprofile`, {
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`, // Send token in the Authorization header
+          "Authorization": `Bearer ${token}`, 
         },
       });
 
@@ -43,6 +43,16 @@ function UserProfile() {
       console.error('Fetch Error:', err);
     }
   };
+  const handleLogout = () => {
+      let data = window.confirm("Are You Ready to Logout");
+      if (data == true) {
+        localStorage.removeItem("token");
+        navigate("/");
+      } else {
+        toast.error("Logout Cancelled");
+      }
+    };
+  
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -107,7 +117,6 @@ function UserProfile() {
     })
       .then((response) => response.json())
       .then((post) => {
-        console.log(post);
         fetchUserProfile()
         
         
@@ -124,9 +133,84 @@ function UserProfile() {
       {!selectedPost && (
         <div>
         {/* <h1>User Profile for {userProfile.email}</h1> */}
-        <img src="https://img.freepik.com/premium-photo/male-female-profile-avatar-user-avatars-gender-icons_1020867-75336.jpg" className="profileimg ml-5 mt-3 " />
+        <div className="mb-5">
+          <nav className="bg-white shadow-md fixed-top w-full z-50">
+                   <div className="container mx-auto px-4 py-1 flex justify-between items-center">
+                     <Link to="/blog" className="p-0">
+                       <img
+                         src="https://i.ibb.co/d40VBNy/Screenshot-2025-01-22-144604.png"
+                         className="h-10 max-sm:w-16"
+                         alt="logo"
+                       />
+                     </Link>
+       
+                     <button
+                       className="lg:hidden text-gray-500  "
+                       aria-label="Toggle navigation"
+                       onClick={() =>
+                         document
+                           .getElementById("navbarNavAltMarkup")
+                           .classList.toggle("hidden")
+                       }
+                     >
+                       <span className="navbar-toggler-icon">☰</span>
+                     </button>
+       
+                     <div
+                       className="lg:flex justify-end items-center w-[90%] gap-8 hidden"
+                       
+                     >
+                       <div className="flex items-center gap-6">
+                         <Link
+                           className="nav-link text-black-50 font-bold hover:text-gray-700"
+                           to="/createblog"
+                         >
+                           Create Blog
+                         </Link>
+       
+                         <Link
+                           className="nav-link text-black-50 font-bold hover:text-gray-700"
+                           to="/userblogs"
+                         >
+                           User Blogs
+                         </Link>
+       
+                         <button
+                           className=" bg-gray-800 text-white font-bold py-2 px-4 rounded-full"
+                           onClick={handleLogout}
+                         >
+                           Logout
+                         </button>
+                       </div>
+                     </div>
+                   </div>
+       
+                   <div className="lg:hidden bg-white-700 text-black hidden" id="navbarNavAltMarkup">
+                     <Link
+                       className="block px-4 py-2 hover:bg-gray-600"
+                       to="/createblog"
+                     >
+                       Create Blog
+                     </Link>
+                     <Link
+                       className="block px-4 py-2 hover:bg-gray-600"
+                       to="/userblogs"
+                     >
+                       User Blogs
+                     </Link>
+       
+                     <button
+                       className="block px-4 py-2 text-white bg-gray-700 rounded-md ms-3 mb-2 "
+                       onClick={handleLogout}
+                     >
+                       Logout
+                     </button>
+                   </div>
+                 </nav>
+          </div>
+        <img src="https://img.freepik.com/premium-photo/male-female-profile-avatar-user-avatars-gender-icons_1020867-75336.jpg" className="profileimg ml-5 mt-3 mt-5" />
       <p className="fw-semibold text-secondary ml-5 mb-3 mt-2">{userProfile.name}</p>
-      <h2 className="fs-3"> My Blogs</h2>
+      <h2 className="fs-3 ml-5"> My Blogs</h2>
       
       <div className="blogs-con">
         {userPosts.map((post,index) => (

@@ -9,10 +9,13 @@ import Update from './components/update';
 import { TokenProvider } from './components/tokencontext';
 import Authors from './components/authors';
 import UserProfile from './components/userblogs';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
     return (
         <TokenProvider>
+            
         <Router>
                 <Routes>
                     <Route path="/login" element={<Login />} />
