@@ -14,7 +14,7 @@ function Home() {
     }, []);
 
     const fetchData = () => {
-        fetch("https://blogpost-backend-wheat.vercel.app/protectedroutes", {
+        fetch("https://blog-backend-1-g2af.onrender.com/protectedroutes", {
             headers: {
                 // Authorization: Bearer ${token},
             },

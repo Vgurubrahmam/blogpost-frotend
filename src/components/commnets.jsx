@@ -33,7 +33,7 @@ const Comment = ({ selectedPost }) => {
   const fetchUserProfile = async () => {
     try {
       const response = await fetch(
-        `https://blogpost-backend-wheat.vercel.app/userprofile`,
+        `https://blog-backend-1-g2af.onrender.com/userprofile`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const Comment = ({ selectedPost }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://blogpost-backend-wheat.vercel.app/addComments", {
+      const response = await fetch("https://blog-backend-1-g2af.onrender.com/addComments", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ useEffect(()=>{
 },[selectedPost?._id])
 const fetchComments=async()=>{
 try{
-    const response = await fetch(`https://blogpost-backend-wheat.vercel.app/getComments?postId=${selectedPost?._id}`);
+    const response = await fetch(`https://blog-backend-1-g2af.onrender.com/getComments?postId=${selectedPost?._id}`);
     if (!response.ok) {
         throw new Error(`Failed to fetch comments. Status: ${response.status}`);
       }

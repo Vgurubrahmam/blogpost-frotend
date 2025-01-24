@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+
+import { FaRegEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
 import "./login.css"; // Assuming you have additional custom styles here
 
@@ -27,7 +30,7 @@ function Signup() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    fetch("https://blogpost-backend-wheat.vercel.app/signup", {
+    fetch("https://blog-backend-1-g2af.onrender.com/signup", {
       method: "POST",
       body: JSON.stringify(userDetails),
       headers: {
@@ -126,10 +129,11 @@ function Signup() {
                   <div className="input-group-append">
                     <button
                       type="button"
-                      className="btn btn-inline-secondary bg-white text-dark border border-secondary"
+                      className="btn btn-outline-none bg-white p-2 py-3 rounded-none
+                       text-dark"
                       onClick={togglePasswordVisibility}
                     >
-                      <i className={`fa ${showPassword ? "fa-eye-slash" : "fa-eye"}`}></i>
+                      {showPassword ? <FaEye /> : <FaRegEyeSlash />}
                     </button>
                   </div>
                 </div>

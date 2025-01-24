@@ -4,7 +4,8 @@ import './login.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from '../header';
-
+import { FaRegEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 function Login() {
   const navigate = useNavigate();
   // const { token, setToken } = useContext(TokenContext); 
@@ -25,7 +26,7 @@ function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("https://blogpost-backend-wheat.vercel.app/login", {
+    fetch("https://blog-backend-1-g2af.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -114,13 +115,15 @@ function togglePasswordVisibility(){
                     onChange={handleInput}
                   />
                   <div className="input-group-append">
-                    <button
-                      type="button"
-                      className="btn btn-outline-none bg-white text-dark"
-                      onClick={togglePasswordVisibility}
-                    >
-                      <i className={`fa ${showPassword ? "fa-eye-slash" : "fa-eye"}`}></i>
-                    </button>
+                  <button
+  type="button"
+  className="btn btn-outline-none bg-white p-2 py-3 rounded-none
+   text-dark"
+  onClick={togglePasswordVisibility}
+>
+  {showPassword ? <FaEye /> : <FaRegEyeSlash />}
+</button>
+
                   </div>
                 </div>
             <button type="submit" className="buttonlogin btn btn-danger fw-bold mt-5 p-2 w-100">Login</button>

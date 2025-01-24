@@ -24,7 +24,7 @@ function Create() {
   
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("https://blogpost-backend-wheat.vercel.app/blogs", {
+      const response = await fetch("https://blog-backend-1-g2af.onrender.com/blogs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

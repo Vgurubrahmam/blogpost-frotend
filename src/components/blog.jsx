@@ -29,7 +29,7 @@ function Blog() {
 
 
   const fetchData = () => {
-    fetch("https://blogpost-backend-wheat.vercel.app/protectedroutes", {
+    fetch("https://blog-backend-1-g2af.onrender.com/protectedroutes", {
       headers: {
         "Content-type": "application/json",
       },

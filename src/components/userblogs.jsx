@@ -23,7 +23,7 @@ function UserProfile() {
 
   const fetchUserProfile = async () => {
     try {
-      const response = await fetch(`https://blogpost-backend-wheat.vercel.app/userprofile`, {
+      const response = await fetch(`https://blog-backend-1-g2af.onrender.com/userprofile`, {
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`, 
@@ -74,7 +74,7 @@ function UserProfile() {
     let data = window.confirm("Are You Ready to Delete");
   
     if (data) {
-      fetch(`https://blogpost-backend-wheat.vercel.app/deletepost/${post._id}`, {
+      fetch(`https://blog-backend-1-g2af.onrender.com/deletepost/${post._id}`, {
         method: "DELETE",
       })
         .then(() => {
@@ -108,7 +108,7 @@ function UserProfile() {
   const handleUpdate = (event) => {
     event.preventDefault();
     console.log(updatepost)
-    fetch("https://blogpost-backend-wheat.vercel.app/updateposts/" + updatepost._id, {
+    fetch("https://blog-backend-1-g2af.onrender.com/updateposts/" + updatepost._id, {
       method: "PATCH",
       headers: {
         "Content-type": "application/json",
