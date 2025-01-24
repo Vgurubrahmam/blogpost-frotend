@@ -58,7 +58,7 @@ const Comment = ({ selectedPost }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8000/addComments", {
+      const response = await fetch("https://blogpost-backend-wheat.vercel.app/addComments", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ useEffect(()=>{
 },[selectedPost?._id])
 const fetchComments=async()=>{
 try{
-    const response = await fetch(`http://localhost:8000/getComments?postId=${selectedPost?._id}`);
+    const response = await fetch(`https://blogpost-backend-wheat.vercel.app/getComments?postId=${selectedPost?._id}`);
     if (!response.ok) {
         throw new Error(`Failed to fetch comments. Status: ${response.status}`);
       }
